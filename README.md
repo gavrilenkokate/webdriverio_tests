@@ -37,4 +37,5 @@ A WebdriverIO reporter plugin to create Allure Test Reports.
 The Allure Reporter creates Allure test reports which is an HTML generated website with all necessary information to debug your test results and take a look on error screenshots.
 
  
-[WebdriverIO]:https://webdriver.io/
+[WebdriverIO](https://webdriver.io/)
+
