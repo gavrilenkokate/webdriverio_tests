@@ -18,7 +18,7 @@
     "wdio-chromedriver-service": "^6.0.4"
   },
   "scripts": {
-    "test": "wdio run wdio.conf.js",
+    "test": "wdio wdio.conf.js",
     "generate-allure-report": "allure generate ./testsResults/allureResults -c -o ./testsResults/allure-report && allure open ./testsResults/allure-report"
   },
   "repository": {
