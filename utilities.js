@@ -7,10 +7,10 @@ class Utilities {
 
     static takeScreenshot(name, failure = false) {
 
-        const path = './testResults/screenshots/';
+        const path = './testsResults/screenshots/';
 
         if (!fs.existsSync(path)) {
-            fs.mkdirSync(path, {recursive: true});
+            fs.mkdirSync(path, { recursive: true });
         }
         if (failure) {
             name = name + '_fail';
@@ -34,7 +34,7 @@ class Utilities {
                     fs.unlinkSync(curPath);
                 }
             });
-           // fs.rmdirSync(path);
+            // fs.rmdirSync(path);
         }
     }
 

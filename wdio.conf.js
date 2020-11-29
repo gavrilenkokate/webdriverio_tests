@@ -226,9 +226,16 @@ exports.config = {
     /**
      * Function to be executed after a test (in Mocha/Jasmine).
      */
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
-
+    afterTest: function (test, context, { error, result, duration, passed, retries }) {
+        if (error !== undefined) {
+            try {
+                //TODO: Fix allure reporting on failure
+                Utilities.takeScreenshot(test.title, true)
+            } catch {
+                console.log('>> Capture Screenshot Failed!');
+            }
+        }
+    },
 
     /**
      * Hook that gets executed after the suite has ended
