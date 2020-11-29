@@ -7,25 +7,26 @@ class LoginPage extends Page {
     /**
      * define selectors using getter methods
      */
-    get inputUsername () { return $('#username') }
-    get inputPassword () { return $('#password') }
-    get btnSubmit () { return $('button[type="submit"]') }
+    get inputUserLogin() { return $('#user_login') }
+    get inputPassword() { return $('#user_password') }
+    get btnSignIn() { return $('input[type="submit"]') }
+    get alertError() { return $('div.alert.alert-error') }
 
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
      */
-    login (username, password) {
-        this.inputUsername.setValue(username);
+    login(username, password) {
+        this.inputUserLogin.setValue(username);
         this.inputPassword.setValue(password);
-        this.btnSubmit.click(); 
+        this.btnSignIn.click();
     }
 
     /**
      * overwrite specifc options to adapt it to page object
      */
-    open () {
-        return super.open('login');
+    open() {
+        return super.open('login.html');
     }
 }
 
