@@ -3,7 +3,7 @@ const Path = require('path');
 const allure = require('@wdio/allure-reporter').default;
 
 
-export default class Utilities {
+class Utilities {
 
     static takeScreenshot(name, failure = false) {
 
@@ -44,3 +44,4 @@ export default class Utilities {
         }
     }
 }
+module.exports = Utilities;

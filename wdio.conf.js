@@ -1,3 +1,4 @@
+const Utilities = require('./utilities');
 
 exports.config = {
     //
@@ -147,7 +148,6 @@ exports.config = {
         require: ['@babel/register'],
         ui: 'bdd',
         timeout: 60000,
-        require: ['@babel/register']
     },
     //
     // =====
