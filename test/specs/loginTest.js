@@ -1,4 +1,5 @@
-const LoginPage = require('../pageobjects/login.page');
+// login.spec.js
+import LoginPage from '../pageobjects/login.page'
 
 describe('E2E Tests -  Login/ Logout Form Tests', () => {
 

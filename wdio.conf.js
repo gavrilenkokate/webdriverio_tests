@@ -1,4 +1,3 @@
-//
 const Utilities = require('./utilities');
 
 exports.config = {
@@ -69,7 +68,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'silent',
+    logLevel: 'info',
     //
     // Set specific log levels per logger
     // loggers:
@@ -139,13 +138,16 @@ exports.config = {
             disableMochaHooks: true
         }]],
 
+
+
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
+        // Babel setup
+        require: ['@babel/register'],
         ui: 'bdd',
         timeout: 60000,
-        require: ['@babel/register']
     },
     //
     // =====
@@ -189,7 +191,8 @@ exports.config = {
      * Gets executed before test execution begins. At this point you can access to all global
      * variables like `browser`. It is the perfect place to define custom commands.
      * @param {Array.<Object>} capabilities list of capabilities details
-     * @param {Array.<String>} specs List of spec file paths that are to be run
+     * @param {Array.<String>} specs        List of spec file paths that are to be run
+     * @param {Object}         browser      instance of created browser/device session
      */
     // before: function (capabilities, specs) {
     // },
@@ -280,10 +283,10 @@ exports.config = {
     // onComplete: function(exitCode, config, capabilities, results) {
     // },
     /**
-     * Gets executed when a refresh happens.
-     * @param {String} oldSessionId session ID of the old session
-     * @param {String} newSessionId session ID of the new session
-     */
+    * Gets executed when a refresh happens.
+    * @param {String} oldSessionId session ID of the old session
+    * @param {String} newSessionId session ID of the new session
+    */
     //onReload: function(oldSessionId, newSessionId) {
     //}
-};
+}
