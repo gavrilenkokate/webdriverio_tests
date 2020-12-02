@@ -7,6 +7,7 @@ class LoginPage extends Page {
     /**
        * define selectors using getter methods
        */
+    get loginForm() { return $('#login_form') }
     get inputUserLogin() { return $('#user_login') }
     get inputPassword() { return $('#user_password') }
     get btnSignIn() { return $('input[type="submit"]') }
@@ -16,9 +17,15 @@ class LoginPage extends Page {
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
      */
-    login(username, password) {
+    submitLoginForm(username, password) {
         this.inputUserLogin.setValue(username);
         this.inputPassword.setValue(password);
+        this.btnSignIn.click();
+    }
+
+    login() {
+        this.inputUserLogin.setValue('username');
+        this.inputPassword.setValue('password');
         this.btnSignIn.click();
     }
 

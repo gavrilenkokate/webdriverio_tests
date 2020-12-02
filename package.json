@@ -4,7 +4,7 @@
   "description": "Automation UI Tests for http://zero.webappsecurity.com website",
   "main": "index.js",
   "scripts": {
-    "test": "wdio wdio.conf.js",
+    "test": "npx wdio wdio.conf.js",
     "generate-allure-report": "allure generate ./testsResults/allureResults -c -o ./testsResults/allure-report && allure open ./testsResults/allure-report"
   },
   "keywords": [],
@@ -23,7 +23,8 @@
     "@wdio/sync": "^6.9.1",
     "allure-commandline": "^2.13.0",
     "chromedriver": "^87.0.0",
-    "wdio-chromedriver-service": "^6.0.4"
+    "wdio-chromedriver-service": "^6.0.4",
+    "prettier": "^2.2.1"
   },
   "repository": {
     "type": "git",
