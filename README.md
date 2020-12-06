@@ -38,4 +38,3 @@ The Allure Reporter creates Allure test reports which is an HTML generated websi
 
  
 [WebdriverIO](https://webdriver.io/)
-
