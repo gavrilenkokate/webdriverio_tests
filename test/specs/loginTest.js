@@ -3,7 +3,7 @@ import LoginPage from '../pageobjects/login.page'
 describe('E2E Tests -  Login/ Logout Form Tests', () => {
 	beforeEach(() => {
 		LoginPage.open()
-		LoginPage.loginForm.waitForDisplayed()
+		LoginPage.loginFoForDisplayed()
 	})
 
 	it('Should not login with invalid credentials', () => {
