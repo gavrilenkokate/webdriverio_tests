@@ -5,7 +5,7 @@ const allure = require('@wdio/allure-reporter').default;
 
 class Utilities {
 
-    static takeScreenshot(name, failure = false) {
+    static takeScreenshot(name, failurde = false) {
 
         const path = './testsResults/screenshots/';
 
